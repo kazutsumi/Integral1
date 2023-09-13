@@ -1,0 +1,936 @@
+\documentclass[11pt, uplatex, dvipdfmx]{jsarticle}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,enumerate,bm,fancyhdr, braket, setspace, emathEy}
+\usepackage{plext}
+\newcommand{\ds}{\displaystyle}
+
+\renewcommand{\tagform}[1]{(#1)}%
+\preEqlabel{}
+
+\pagestyle{fancy}
+
+
+\chead{積分基本問題集} 
+
+\begin{document}
+
+\thispagestyle{empty}
+
+
+\begin{center}
+  \pbox<t>{\Huge \hspace{1.5in} 積　分　基　本　問　題　集　壱}
+\end{center}
+
+\newpage
+
+次の積分または広義積分を求めよう．
+
+  \vspace{.2in}
+
+  \begin{edaenumerate}<retusuu=2, gyoukan=.3in>[(1)]
+    
+  \item $\ds \int_{-1}^{5} \left( 3x^3-5x-1 \right) \ dx$
+    
+  \item $\ds \int_{0}^{-2} \left( 3x-5 \right)^6 \ dx$
+    
+  \item $\ds \int_{1}^{4} \frac{dx}{(2x+1)^2}$
+    
+  \item $\ds \int_{0}^{\pi} \sin x \ dx$
+    
+  \item $\ds \int_{-\pi}^{\pi} \cos x \ dx$
+
+  \item $\ds \int_{-\pi /6}^{\pi /4} \tan x \ dx$
+
+  \item $\ds \int_{\pi/4}^{\pi/3} \frac{dx}{\tan x}$
+
+  \item $\ds \int_{0}^{1} \sin^{-1}x \ dx$
+
+  \item $\ds \int_{-1}^{1} \cos^{-1}x \ dx$
+
+  \item $\ds \int_{-\sqrt{3}}^{1} \tan^{-1}x \ dx$
+
+  \item $\ds \int_0^1 e^x \ dx$
+
+  \item $\ds \int_{1/2}^{3} \log x \ dx$
+
+  \item $\ds \int_{0}^{\pi} x \sin x \ dx$
+
+  \item $\ds \int_{-\pi}^{\pi} \left(\sin x\right) \cos \left(2x \right)\ dx$
+
+  \item $\ds \int_{-1}^{1} \frac{dx}{1+x^2}$
+
+  \item $\ds \int_{0}^{2} \frac{dx}{4+x^2}$
+
+  \item $\ds \int_{0}^{2} x^2 e^{-2x} \ dx$
+
+  \item $\ds \int_{-1/2}^{1/2} \frac{dx}{\sqrt{1-x^2}}$
+
+  \item $\ds \int_{-3/2}^{3/\sqrt{6}} \frac{dx}{\sqrt{3-x^2}}$
+
+  \item $\ds \int_{0}^{\sqrt{2}} \frac{dx}{\sqrt{x^2+2}}$
+
+  \item $\ds \int_{0}^{1} \sqrt{1-x^2} \ dx$
+
+  \item $\ds \int_{0}^{2} \sqrt{1+4x^2} \ dx$
+
+  \item $\ds \int_{0}^{1} 3^x \ dx$
+
+  \item $\ds \int_{1}^{2} \log_2 x \ dx$
+
+  \item $\ds \int_{0}^{1} \frac{x^3}{\sqrt{x^2+5}} \ dx$
+
+  \item $\ds \int_1^e \left( \log x \right)^2 \ dx$
+
+  \item $\ds \int_{0}^{1} \frac{dx}{(x^2+1)^2}$
+
+  \item $\ds \int_{0}^{1} \frac{dx}{x^2+x+1}$
+
+  \item $\ds \int_{-1}^{1} \frac{dx}{x^2-4}$
+
+  \item $\ds \int_{0}^{1} \frac{x+2}{(x^2+x+1)^2} \ dx$
+
+  \item $\ds \int_{1}^{2} \frac{dx}{x^2(x+1)}$
+
+  \item $\ds \int_{0}^{\frac{1}{2}} \frac{1+x^2}{1-x^2} \ dx$
+
+  \item $\ds \int_{0}^{1} \frac{dx}{x^4+1}$
+
+  \item $\ds \int_{1}^{4} \frac{dx}{\sqrt{x}+1}$
+
+  \item $\ds \int_{1}^{\sqrt{2}} \frac{dx}{x^3+x}$
+
+  \item $\ds \int_{0}^{1} \frac{dx}{\sqrt{x}}$
+
+  \item $\ds \int_{1}^{\infty} \frac{dx}{x^3}$
+
+  \item $\ds \int_{0}^{2} \frac{dx}{\sqrt{4-x^2}}$
+
+  \item $\ds \int_{1}^{2} \frac{dx}{x\sqrt{x-1}}$
+
+  \item $\ds \int_{-1}^{1} \frac{dx}{\sqrt[4]{(1+x)^3}}$
+
+  \item $\ds \int_{-2}^{2} \frac{x}{\sqrt{4-x^2}} \ dx$
+
+  \item $\ds \int_{0}^{\infty} x e^{-x^2} \ dx$
+
+  \item $\ds \int_{0}^{1} x \log x \ dx$
+
+  \item $\ds \int_{-\infty}^{\infty} \frac{dx}{x^2+4}$
+
+  \item $\ds \int_{1}^{\infty}\frac{\log x}{x^2} \ dx$
+
+  \item $\ds \int_{0}^{\infty} \frac{dx}{e^x (1+e^x)}$
+
+  \item $\ds \int_{0}^{\infty}\frac{dx}{(x^2+1)(x^2+4)}$
+
+  \item $\ds \int_{0}^{1} \frac{x^4}{\sqrt{1-x^2}} \ dx$
+
+  \end{edaenumerate}
+
+\newpage
+
+
+\begin{enumerate}[(1)]
+  \setlength{\itemsep}{.2in}
+  
+  \item $\ds \int_{-1}^{5} \left( 3x^3-5x-1 \right) \ dx = \left[
+      \frac{3}{4}x^4 - \frac{5}{2}x^2 - x \right]_{-1}^{5}= 402.$
+
+  \item $u=3x-5$ とおくと，$\frac{du}{dx} = 3$ より $1=\frac{1}{3}\frac{du}{dx}$ であり，積分区間は
+    \[
+      \begin{array}{c|ccc}
+        x & 0 & \to & -2\\ \hline
+        u & -5 & \to & -11
+      \end{array}
+    \]
+    と変換されるので，以下を得る．
+    \[
+      \int_{0}^{-2} \left( 3x-5 \right)^6 \ dx = \int_{0}^{-2} u^{6}\ \frac{1}{3} \frac{du}{dx} \ dx
+      = \frac{1}{3} \int_{-5}^{-11} u^6 \ du = \frac{1}{3} \left[ \frac{1}{7} u^7 \right]_{-5}^{-11}
+      = -\frac{6469682}{7}.
+    \]
+    
+   \item $u=2x+1$ とおく
+     と，$\frac{du}{dx}=2$ より $1=\frac{1}{2}\frac{du}{dx}$ であり，積
+     分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 1 & \to & 4\\ \hline
+         u & 3 & \to & 9
+       \end{array}
+     \]
+     と変換されるので，以下を得る．
+     \[
+       \int_{1}^{4} \frac{1}{(2x+1)^2} \ dx = \int_{1}^{4} \frac{1}{u^2} \ \frac{1}{2} \frac{du}{dx} \ dx
+       = \frac{1}{2} \int_{3}^{9} u^{-2} \ du =\frac{1}{2} \Big[ - u^{-1} \Big]_{3}^{9} = \frac{1}{9}.
+     \]
+
+   \item $\ds \int_{0}^{\pi} \sin x \ dx =\Big[ -\cos x \Big]_{0}^{\pi}= 2.$
+
+   \item $\ds \int_{-\pi}^{\pi} \cos x \ dx = \Big[ \sin x \Big]_{-\pi}^{\pi} =0.$
+
+   \item $\tan x = \frac{\sin x}{\cos x}$ なので，$u=\cos x$
+     とおけば $\frac{du}{dx}=-\sin x$ より $\sin x = -\frac{du}{dx}$
+     であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & -\pi/6 & \to & \pi/4\\ \hline
+         u & \sqrt{3}/2 & \to & \sqrt{2}/2
+       \end{array}
+     \]
+     と変換される．よって，以下を得る．
+     \begin{align*}
+       \int_{-\pi/6}^{\pi/4} \tan x \ dx  &= \int_{-\pi/6}^{\pi/4} \frac{\sin x}{\cos x} \ dx =
+       \int_{-\pi/6}^{\pi/4} \frac{1}{u} \left( - \frac{du}{dx} \right) \
+                                            dx = -\int_{\sqrt{3}/2}^{\sqrt{2}/2} \frac{du}{u}\\
+       &= -\Big[ \log |u| \Big]_{\sqrt{3}/2}^{\sqrt{2}/2}
+       =\frac{1}{2} \log \frac{3}{2}.
+     \end{align*}
+
+   \item $\frac{1}{\tan x} = \frac{\cos x}{\sin x}$ なので，$u=\sin x$
+     とおけば $\frac{du}{dx} = \cos x$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & \pi/4 & \to & \pi/3\\ \hline
+         u & \sqrt{2}/2 & \to & \sqrt{3}/2
+       \end{array}
+     \]
+     と変換される．よって，以下を得る．
+     \[
+       \int_{\pi/4}^{\pi/3} \frac{dx}{\tan x} = \int_{\pi/4}^{\pi/3}
+       \frac{\cos x}{\sin x} \ dx = \int_{\pi/4}^{\pi/3} \frac{1}{u}
+       \frac{du}{dx} \ dx = \int_{\sqrt{2}/2}^{\sqrt{3}/2}
+       \frac{du}{u} = \Big[ \log|u| \Big]_{\sqrt{2}/2}^{\sqrt{3}/2}
+       =\frac{1}{2}\log \frac{3}{2}.
+     \]
+
+   \item $\ds \int_{0}^{1} \sin^{-1}x \ dx = \left[ x \sin^{-1} x + \sqrt{1-x^2} \right]_{0}^{1}= \frac{\pi}{2}-1.$
+
+   \item $\ds \int_{-1}^{1} \cos^{-1}x \ dx = \left[ x \cos^{-1} x - \sqrt{1-x^2} \right]_{-1}^{1}= \pi.$
+
+   \item
+     $\ds \int_{-\sqrt{3}}^{1} \tan^{-1}x \ dx = \left[ x \tan^{-1}x
+       -\frac{1}{2} \log (x^2+1)\right]_{-\sqrt{3}}^{1} = \left(
+       \frac{1}{4} - \frac{\sqrt{3}}{3}\right) \pi + \frac{1}{2} \log 2.$
+
+   \item $\ds \int_0^1 e^x \ dx =\Big[ e^x \Big]_{0}^{1} = e-1.$
+
+   \item
+     $\ds \int_{1/2}^{3} \log x \ dx = \int_{1/2}^{3} \left( x \right)'
+     \log x \ dx = \Big[ x \log x \Big]_{1/2}^{3} - \int_{1/2}^{3} dx =
+     -\frac{5}{2} + \frac{1}{2} \log 2 + 3 \log 3.$
+
+   \item $\ds \int_{0}^{\pi} x \sin x \ dx = \int_{0}^{\pi}x \left( -\cos x\right)' \ dx
+     = \Big[ - x \cos x \Big]_{0}^{\pi} - \int_{0}^{\pi} \left(-\cos x\right) \ dx = \pi.$ 
+
+   \item
+     $\left(\sin x\right) \cos \left(2x\right) =
+     \frac{1}{2}\left( \sin \left( 3x \right) - \sin x\right)$ なので，
+     \[
+       \int_{-\pi}^{\pi} \left(\sin x \right) \cos \left(2x\right) \ dx = \frac{1}{2} \left(
+         \int_{-\pi}^{\pi}\sin 3x \ dx - \int_{-\pi}^{\pi} \sin x \ dx\right)
+       = \frac{1}{2}\int_{-\pi}^{\pi} \sin 3x \ dx
+     \]
+     である．$u=3x$ とおけ
+     ば $\frac{du}{dx}=3$ より $1=\frac{1}{3}\frac{du}{dx}$ であり，積分
+     区間は
+     \[
+       \begin{array}{c|ccc}
+         x & -\pi & \to & \pi\\ \hline
+         u & -3\pi & \to &3 \pi
+       \end{array}
+     \]
+     と変換される．よって，以下を得る．
+     \[
+       \int_{-\pi}^{\pi}\left( \sin x \right) \cos \left( 2x\right) \
+       dx = \frac{1}{2} \int_{-\pi}^{\pi} \sin 3x \ dx = \frac{1}{2}
+       \int_{-\pi}^{\pi}\left( \sin u \right) \frac{1}{3}
+       \frac{du}{dx} \ dx = \frac{1}{6} \int_{-3\pi}^{3\pi} \sin u \
+       du=0\\
+     \]
+
+   \item $\ds \int_{-1}^{1} \frac{dx}{1+x^2}= \Big[ \tan^{-1} x \Big]_{-1}^{1} = \frac{1}{2}\pi.$
+
+   \item
+     $\ds \frac{1}{4+x^2}=
+     \frac{1}{4}\left(\frac{1}{1+\left(\frac{x}{2}\right)^2}\right)$ な
+     ので，$u=\frac{x}{2}$ とおけ
+     ば $\frac{du}{dx}=\frac{1}{2}$ より $1=2\frac{du}{dx}$ であり，積
+     分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 0 & \to & 2 \\ \hline
+         u & 0 & \to & 1
+       \end{array}
+     \]
+     と変換される．よって，以下を得る．
+     \[
+       \int_{0}^{4}\frac{dx}{4+x^2} = \frac{1}{4} \int_{0}^{2} \frac{dx}{1+\left(\frac{x}{2}\right)^2} = \frac{1}{4}
+       \int_{0}^{2} \frac{1}{1+u^2} \ 2\  \frac{du}{dx} \ dx = \frac{1}{2} \int_{0}^{1} \frac{du}{1+u^2}
+       = \frac{1}{2} \Big[ \tan^{-1} u \Big]_{0}^{1} = \frac{1}{8}\pi.
+     \]
+
+
+   \item 部分積分を繰り返す．
+     
+     \vspace{.1in}
+
+     $\ds
+     \begin{aligned}
+       \int_{0}^{2} x^2 e^{-2x} \ dx &= \int_{0}^{2} x^2
+       \left(-\frac{1}{2} e^{-2x} \right)' \ dx = \left[-\frac{1}{2} x^2
+         e^{-2x} \right]_{0}^{2} + \int_{0}^{2} x e^{-2x} \ dx\\
+       &= -2e^{-4} + \int_{0}^{2} x \left( -\frac{1}{2} e^{-2x}\right)' \ dx\\
+       &= -2e^{-4} + \left[ -\frac{1}{2}x e^{-2x} \right]_{0}^{2} + \frac{1}{2} \int_{0}^{2} e^{-2x} \ dx\\
+       &= -3e^{-4} + \frac{1}{2} \left[ -\frac{1}{2} e^{-2x}\right]_{0}^{2} = \frac{1}{4} - \frac{13}{4}e^{-4}.
+     \end{aligned}
+     $
+
+   \item $\ds \int_{-1/2}^{1/2} \frac{dx}{\sqrt{1-x^2}} = \Big[ \sin^{-1} x \Big]_{-1/2}^{1/2} = \frac{1}{3}\pi.$
+
+   \item $\ds \frac{1}{\sqrt{3-x^2}}
+     = \frac{1}{\sqrt{ 1-\left( \frac{x}{\sqrt{3}} \right)^2} }\ \frac{1}{\sqrt{3}} $ なので，
+     $u=\frac{x}{\sqrt{3}}$ とおけば $\frac{du}{dx} = \frac{1}{\sqrt{3}}$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & -3/2 & \to & 3/\sqrt{6}\\ \hline
+         u & -\sqrt{3}/2 & \to & \sqrt{2}/2
+       \end{array}
+     \]
+     と変換される．よって，以下を得る．
+     \[
+       \begin{aligned}
+         \int_{-3/2}^{3/\sqrt{6}} \frac{dx}{\sqrt{3-x^2}} &
+         = \int_{-3/2}^{3/\sqrt{6}} \frac{1}{\sqrt{1- \left(\frac{x}{\sqrt{3}}\right)^2 }}\
+         \frac{1}{\sqrt{3}} \ dx = \int_{-3/2}^{3/\sqrt{6}} \frac{1}{\sqrt{1-u^2}}
+         \frac{du}{dx}\ dx= \int_{-\sqrt{3}/2}^{\sqrt{2}/2} \frac{du}{\sqrt{1-u^2}}\\
+         &= \Big[ \sin^{-1} u \Big]_{-\sqrt{3}/2}^{\sqrt{2}/2} = \frac{7}{12}\pi.
+       \end{aligned}
+   \]
+   \item $u=x+\sqrt{x^2+2}$ とおくと，
+     $\ds \frac{du}{dx}=\frac{x+\sqrt{x^2+2}}{\sqrt{x^2+2}}=\frac{u}{\sqrt{x^2+2}}$ より
+     $\ds 1 = \frac{\sqrt{x^2+2}}{u} \frac{du}{dx}$ であり，積分区間は
+     \[
+     \begin{array}{c|ccc}
+       x & 0 & \to & \sqrt{2}\\ \hline
+       u & \sqrt{2} & \to & 2+\sqrt{2}
+     \end{array}
+   \]
+   と変換されるので，以下を得る．
+     \begin{align*}
+       \int_{0}^{\sqrt{2}} \frac{dx}{\sqrt{x^2+2}} 
+       = \int_{0}^{\sqrt{2}} \frac{1}{\sqrt{x^2+2}} \frac{\sqrt{x^2+2}}{u}\ \frac{du}{dx} \ dx
+       = \int_{\sqrt{2}}^{2+\sqrt{2}} \frac{du}{u}
+       = \log \left( 1+ \sqrt{2} \right).  
+     \end{align*}
+
+     あるいは，$x = \sqrt{2}~\sinh u$ とおく
+     と $\frac{dx}{du} = \sqrt{2}~\cosh u$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 0 & \to & \sqrt{2}\\ \hline
+         u & 0 & \to & \sinh^{-1}1
+       \end{array}
+     \]
+     と変換されるので，$\alpha=\sinh^{-1}1 \; (\Leftrightarrow \sinh \alpha =1)$ とおいて
+     \[
+       \int_{0}^{\sqrt{2}} \frac{dx}{\sqrt{x^2+2}} =
+       \int_{0}^{\alpha}\frac{\sqrt{2}~\cosh
+         u}{\sqrt{2\left(\sinh^2u+1\right)}} \ du
+       = \int_{0}^{\alpha} du = \alpha= \log\left(1+\sqrt{2}\right)
+     \]
+     と計算することもできる．なお，$\alpha=\sinh^{-1}1$ の値は
+     \[
+       \alpha = \sinh^{-1} 1 \; \Leftrightarrow \; 1 = \sinh \alpha = \frac{e^{\alpha}+e^{-\alpha}}{2} \; \Leftrightarrow \;
+       \left( e^{\alpha}\right)^2 - 2 e^{\alpha}  -1 =0 \; \Leftrightarrow \; e^{\alpha} = 1+\sqrt{2}
+     \]
+     より，$\alpha = \log\left( 1+\sqrt{2}\right)$ と求められる．
+     
+     
+   \item $u=\sin^{-1} x \left( \Leftrightarrow x=\sin u\right)$ とおく
+     と，$\frac{du}{dx} = \frac{1}{\frac{dx}{du}}=\frac{1}{\cos u}$ より
+     $1=\cos u \ \frac{du}{dx}$ であり，
+     積分区間は
+     \[
+       \begin{array}{c|ccc} x & 0 & \to & 1\\ \hline
+         u & 0 & \to & \frac{\pi}{2}
+       \end{array}
+     \]
+      と変換されるので，以下を得る．
+     \[
+       \int_{0}^{1}\sqrt{1-x^2} \ dx = \int_{0}^{1} \sqrt{\cos^2u} \ \cos u \ \frac{du}{dx} dx=
+       \int_{0}^{\frac{\pi}{2}} \cos^2 u \ du = \frac{\pi}{4}.
+     \]
+
+   \item $\sqrt{1+4x^2} = \left( x \right)' \sqrt{1+4x^2}$ と見なして部分積分をする．
+     \begin{align*}
+       \int_{0}^{2} \sqrt{1+4x^2} \ dx &= \left[ x \sqrt{1+4x^2}
+       \right]_{0}^{2} - \int_{0}^{2}\frac{4x^2}{\sqrt{1+4x^2}} \ dx =
+       2\sqrt{17} - \int_{0}^{2} \frac{1+4x^2-1}{\sqrt{1+4x^2}} \ dx\\
+       &= 2\sqrt{17} - \int_{0}^{2} \sqrt{1+4x^2} \ dx + \int_{0}^{2} \frac{dx}{\sqrt{1+4x^2}}
+     \end{align*}
+     より移行・整理して
+     \[
+       \int_{0}^{2}\sqrt{1+4x^2} \ dx  = \sqrt{17} + \frac{1}{2} \int_{0}^{2} \frac{dx}{\sqrt{1+4x^2}}
+     \]
+     を得る．さらに，$u=2x+\sqrt{1+4x^2}$ とけば
+     \[
+       \frac{du}{dx} =\frac{4x+2\sqrt{1+4x^2}}{\sqrt{1+4x^2}} =
+       \frac{2u}{\sqrt{1+4x^2}}
+     \]
+     より $\ds 1 = \frac{\sqrt{1+4x^2}}{2u} \ \frac{du}{dx}$ であり，積分区
+     間は
+     \[
+       \begin{array}{c|ccc} x & 0 & \to & 2\\ \hline
+         u & 1 & \to & 4+\sqrt{17}
+       \end{array}
+     \]
+     と変換される．よって，以下を得る．
+     \begin{align*}
+       \int_{0}^{4} \sqrt{1+4x^2} \ dx = \sqrt{17} + \frac{1}{2} \int_{1}^{4+\sqrt{17}} \frac{du}{2u}
+       = \sqrt{17} + \frac{1}{4} \log \left( 4+\sqrt{17} \right).
+     \end{align*}
+
+     あるいは，$x=\frac{1}{2}\sinh u$ とおけば $\frac{dx}{du} = \frac{1}{2} \cosh u$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 0 & \to & 2\\ \hline
+         u & 0 & \to & \sinh^{-1}4
+       \end{array}
+     \]
+     と変換されるので，$\alpha=\sinh^{-1}4 \;(\Leftrightarrow \sinh \alpha =4)$ とおいて
+     \[
+       \begin{aligned}
+         \int_{0}^{2}\sqrt{1+4x^2} \ dx &= \int_{0}^{\alpha} \sqrt{1+\sinh^2 u}\  \frac{1}{2}\cosh u \ du
+         =\frac{1}{2}\int_{0}^{\alpha} \cosh^2 u \ du\\
+         &= \frac{1}{2}\int_{0}^{\alpha} \frac{1+\cosh (2u)}{2} \ du
+         = \frac{1}{4} \left[ u + \frac{1}{2}\sinh(2u)\right]_{0}^{\alpha}\\
+         &= \frac{\alpha}{4} + \frac{\sinh(2\alpha)}{8}
+         =\frac{\alpha}{4} + \frac{(\sinh \alpha) \cosh \alpha}{4}
+         =\frac{\alpha}{4} + \frac{(\sinh \alpha) \sqrt{1+\sinh^2\alpha}}{4}\\
+         &= \frac{1}{4}\log\left(4+\sqrt{17}\right) + \sqrt{17}
+       \end{aligned}
+     \]
+     と計算することもできる．なお，$\alpha=\sinh^{-1}4$ の値は
+     \[
+       \alpha = \sinh^{-1}4 \; \Leftrightarrow \; 4 = \sinh \alpha = \frac{e^{\alpha}-e^{-\alpha}}{2}
+       \; \Leftrightarrow \; \left( e^{\alpha}\right)^2 - 8 e^{\alpha} -1=0 \; \Leftrightarrow \;
+       e^{\alpha} = 4 + \sqrt{17}
+     \]
+     より．$\alpha = \log\left(4+\sqrt{17}\right)$ と求められる．
+
+
+   \item $\ds 3^x  = e^{(\log 3) x}$ なので，$u=(\log 3) x$ とおけば $\frac{du}{dx}=\log 3$ より
+     $1 = \frac{1}{\log 3} \frac{du}{dx}$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 0 & \to & 1\\ \hline
+         u & 0 & \to & \log 3
+       \end{array}
+     \]
+     と変換される．よって，以下を得る．
+     \[
+       \int_{0}^{1} 3^x \ dx = \int_{0}^{1} e^{(\log 3)x}  dx = \int_{0}^{1}
+       \frac{e^u}{\log 3} \frac{du}{dx} \ dx =\frac{1}{\log 3} \int_{0}^{\log
+         3} e^{u} \ du = \frac{1}{\log 3} \Big[ e^{u} \Big]_{0}^{\log 3} =
+       \frac{2}{\log 3}.
+     \]
+
+   \item $\ds \int_{1}^{2} \log_2 x \ dx = \int_{1}^{2} \frac{\log x}{\log 2}
+     \ dx = \frac{1}{\log 2} \Big[ x \log x - x\Big]_{1}^{2} = 2 -\frac{1}{\log 2}.$
+
+   \item $\ds \frac{x^3}{\sqrt{x^2+5}} =  x^2 \cdot \frac{x}{\sqrt{x^2+5}}$ なので，
+     $u=\sqrt{x^2+5}$ とおけば $\frac{du}{dx}=\frac{x}{\sqrt{x^2+5}}$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 0 & \to & 1 \\ \hline
+         u & \sqrt{5} & \to & \sqrt{6}
+       \end{array}
+     \]
+     と変換される．よって，以下を得る．
+     \[
+       \begin{aligned}
+         \int_{0}^{1}\frac{x^3}{\sqrt{x^2+5}} \ dx &=\int_{0}^{1} x^2 \cdot \frac{x}{\sqrt{x^2+5}} \ dx
+           = \int_{0}^{1} (u^2-5) \ \frac{du}{dx} \ dx
+         =\int_{\sqrt{5}}^{\sqrt{6}} (u^2-5) \ du \\
+         &= \Big[ \frac{1}{3}u^3 - 5u \Big]_{\sqrt{5}}^{\sqrt{6}}
+         = -3\sqrt{6} + \frac{10}{3}\sqrt{5}.
+       \end{aligned}
+     \]
+
+   \item $\left( \log x\right)^2 = \left( x \right)' \left( \log x\right)^2$ と見なして部分積分をする．
+     \begin{align*}
+       \int_1^e \left( \log x \right)^2 \ dx 
+       & = \Big[ x \left(\log x\right)^2 \Big]_{1}^{e} - \int_{1}^{e} x \cdot \frac{2 \log x}{x} \ dx
+        =e - 2\int_{1}^{e} \log x \ dx\\
+       & = e- 2\Big[ x \log x - x \Big]_{1}^{e}= e-2.
+     \end{align*}
+
+     
+
+   \item $\ds \frac{1}{x^2+1} = \left(x\right)' \frac{1}{x^2+1}$ と見なし
+     て，$\ds \int \frac{dx}{x^2+1}$ に部分積分を適用して
+     \[
+       \begin{aligned}
+         \int \frac{dx}{x^2+1} &= \frac{x}{x^2+1} + 2\int \frac{x^2}{(x^2+1)^2} \ dx
+         = \frac{x}{x^2+1} +2 \int \frac{x^2+1 -1}{(x^2+1)^2} \ dx\\
+         &= \frac{x}{x^2+1} + 2 \left(\int \frac{dx}{x^2+1} - \int \frac{dx}{(x^2+1)^2} \right)
+       \end{aligned}
+     \]
+     を得る．上式を移項・整理して
+     \[
+       \int \frac{dx}{(x^2+1)^2} = \frac{1}{2} \left( \frac{x}{x^2+1} + \int \frac{dx}{x^2+1} \right)
+     \]
+     を得る．よって，以下を得る．
+     \[
+       \int_{0}^{1} \frac{dx}{(x^2+1)^2} = \frac{1}{2}
+       \left[\frac{x}{x^2+1}\right]_{0}^{1} +\frac{1}{2} \int_{0}^{1}
+       \frac{dx}{x^2+1} = \frac{1}{4} + \frac{1}{2} \Big[ \tan^{-1} x
+       \Big]_{0}^{1} = \frac{1}{4} + \frac{\pi}{8}.
+     \]
+
+
+
+   \item 被積分関数の分母を平方完成すると，
+     \[
+       x^2+x+1 = \left(x + \frac{1}{2} \right)^2 + \frac{3}{4} 
+       = \frac{3}{4}\left(\left(\frac{2}{\sqrt{3}}\left(x+\frac{1}{2}\right)\right)^2 +1\right)
+     \]
+     である．ここで，$u=\frac{2}{\sqrt{3}} \left(x+\frac{1}{2}\right)$ とおく
+     と $\frac{du}{dx} = \frac{2}{\sqrt{3}}$ より
+     $1 = \frac{\sqrt{3}}{2} \frac{du}{dx}$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 0 & \to & 1\\ \hline
+         u & 1/\sqrt{3} & \to & \sqrt{3}
+       \end{array}
+     \]
+     と変換される．よって，以下を得る．
+     \begin{align*}
+      \int_{0}^{1} \frac{dx}{x^2+x+1} 
+       &=  \frac{4}{3} \int_{0}^{1} \frac{1}{\frac{4}{3}\left( x+\frac{1}{2}\right)^2  +1}  \ dx
+       =\frac{4}{3} \int_{0}^{1} \frac{1}{u^2+1} \frac{\sqrt{3}}{2} \frac{du}{dx} \ dx\\
+       &  = \frac{2}{\sqrt{3}} \int_{1/\sqrt{3}}^{\sqrt{3}} \frac{du}{u^2+1} 
+       = \frac{2}{\sqrt{3}} \Big[ \tan^{-1} u \Big]_{1/\sqrt{3}}^{\sqrt{3}} = \frac{\pi}{9}\sqrt{3}.
+     \end{align*}
+
+   \item
+     $\ds \int_{-1}^{1} \frac{dx}{x^2-4} =\frac{1}{4} \int_{-1}^{1}
+     \left( \frac{1}{x-2} - \frac{1}{x+2}\right) \ dx=\frac{1}{4}\Big[
+     \log|x-2| - \log |x+2| \Big]_{-1}^{1} = -\frac{1}{2} \log 3.$
+
+   \item $\ds \int_{0}^{1} \frac{x+2}{(x^2+x+1)^2} \ dx 
+     = \frac{1}{2} \int_{0}^{1} \frac{2x+1}{(x^2+x+1)^2} \ dx + \frac{3}{2} \int_{0}^{1} \frac{dx}{(x^2+x+1)^2}$ である．
+
+     \vspace{.1in}
+
+     \begin{itemize}
+       \setlength{\itemsep}{.1in}
+       
+     \item 右辺第1項について：
+       \[
+         \frac{1}{2}\int_{0}^{1}\frac{2x+1}{(x^2+x+1)^2} \ dx =\frac{1}{2}\int_{0}^{1}
+       \frac{(x^2+x+1)'}{(x^2+x+1)^2} \ dx = \frac{1}{2}\left[ -\frac{1}{x^2+x+1}
+       \right]_{0}^{1} = \frac{1}{3}.
+     \]
+       
+     \item 右辺第2項について：
+       \[
+         \left(x^2+x+1\right)^2 
+         = \left( \frac{3}{4}\left( \left(\frac{2}{\sqrt{3}}\left( x+ \frac{1}{2} \right) \right)^2 + 1 \right) \right)^2
+       \]
+       なので，$u= \frac{2}{\sqrt{3}}\left(x+\frac{1}{2}\right)$ と
+       おくと $\frac{du}{dx} =
+       \frac{2}{\sqrt{3}}$ より $1=\frac{\sqrt{3}}{2} \frac{du}{dx}$ で
+       あり，積分区間は
+       \[
+         \begin{array}{c|ccc}
+           x & 0 & \to & 1 \\ \hline
+           u & 1/\sqrt{3} & \to & \sqrt{3}
+         \end{array}
+       \]
+       と変換される．よって，以下を得る．
+       \[
+         \begin{aligned}
+           \frac{3}{2} \int_{0}^{1} \frac{dx}{\left( x^2+x+1\right)^2} &=
+           \frac{8}{3} \int_{0}^{1} \frac{1}{\left( \frac{4}{3} \left( x + \frac{1}{2}\right)^2 + 1\right)^2} \ dx
+           = \frac{8}{3} \int_{0}^{1} \frac{1}{(u^2+1)^2} \frac{\sqrt{3}}{2} \frac{du}{dx} \ dx\\
+           &=\frac{4}{\sqrt{3}} \int_{1/\sqrt{3}}^{\sqrt{3}} \frac{dv}{(u^2+1)^2}
+           = \frac{4}{\sqrt{3}} \left[ \frac{1}{2}\frac{u}{u^2+1} 
+             + \frac{1}{2} \tan^{-1} u \right]_{1/\sqrt{3}}^{\sqrt{3}} \\
+           &= \frac{\pi}{9}\sqrt{3}.
+         \end{aligned}
+       \]
+     \end{itemize}
+     以上より，$\ds \int_{0}^{1} \frac{dx}{(x^2+x+1)^2} = \frac{1}{3} + \frac{\pi}{9}\sqrt{3}$ である．
+
+
+   \item 被積分関数を部分分数に分解する．
+     \begin{align*}
+       \int_{1}^{2} \frac{dx}{x^2(x+1)} 
+       &= \int_{1}^{2} \left(-\frac{1}{x} + \frac{1}{x^2} + \frac{1}{x+1}\right) \ dx
+       = \left[ - \log|x| -\frac{1}{x} + \log|x+1|\right]_{1}^{2}\\
+       &= \frac{1}{2} + \log 3 - 2 \log 2.
+     \end{align*}
+
+         
+
+   \item
+     $\ds \frac{1+x^2}{1-x^2} = \frac{-(1-x^2)+2}{1-x^2} = -1 +
+     \frac{2}{1-x^2} = -1 +\frac{1}{1-x}+\frac{1}{1+x}$ より，以下を得る．
+     \[
+       \int_{0}^{\frac{1}{2}} \frac{1+x^2}{1-x^2} \ dx 
+         = \Big[ -x - \log\left|1-x\right| + \log\left|1+x\right|\Big]_{0}^{\frac{1}{2}}
+         = \log 3 - \frac{1}{2}.
+     \]
+
+   \item 被積分関数の分母を因数分解し，部分分数に分解して 
+     \begin{align*}
+       \int_{0}^{1} \frac{dx}{x^4+1} 
+       &= \int_{0}^{1}
+         \frac{dx}{(x^2+\sqrt{2}x+1)(x^2-\sqrt{2}x+1)}\\
+       &= \frac{1}{4} \int_{0}^{1} \frac{\sqrt{2}x+2}{x^2+\sqrt{2}x+1}
+         \ dx
+         - \frac{1}{4} \int_{0}^{1} \frac{\sqrt{2}x-2}{x^2-\sqrt{2}x+1} \ dx\\
+       &= \frac{1}{4} \left( \frac{1}{\sqrt{2}} \int_{0}^{1} \frac{2x+\sqrt{2}x}{x^2+\sqrt{2}x+1} \ dx 
+         + 2 \int_{0}^{1} \frac{dx}{ \left(\sqrt{2}x+1 \right)^2+1} \right)\\
+       & \quad - \frac{1}{4} \left( \frac{1}{\sqrt{2}} \int_{0}^{1} \frac{2x-\sqrt{2}}{x^2-\sqrt{2}x+1} \ dx
+         -2 \int_{0}^{1} \frac{dx}{\left(\sqrt{2}x-1\right)^2+1} \right)\\
+       & = \frac{1}{4\sqrt{2}} \left[ \log \left( x^2+\sqrt{2}x+1 \right) \right]_{0}^{1}
+         + \frac{1}{2} \int_{0}^{1} \frac{dx}{\left( \sqrt{2}x+1\right)^2+1}\\
+       & \quad - \frac{1}{4\sqrt{2}} \left[ \log \left( x^2-\sqrt{2}x+1\right) \right]_{0}^{1}
+         +\frac{1}{2} \int_{0}^{1} \frac{dx}{\left(\sqrt{2}x-1\right)^2+1}\\
+       &= \frac{\sqrt{2}}{8} \log \left( 3+2\sqrt{2}\right)  
+         + \frac{1}{2}\left(\int_{0}^{1} \frac{dx}{\left(\sqrt{2}x+1\right)^2+1}
+         + \int_{0}^{1}\frac{dx}{\left( \sqrt{2}x-1\right)^2 +1} \right)
+     \end{align*}
+     を得る．$u=\sqrt{2}x+1, \, v=\sqrt{2}x-1$
+     とおくと，$\frac{du}{dx} = \sqrt{2}, \, \frac{dv}{dx}=\sqrt{2}$ であ
+     り，積分区間は
+     \[
+       \begin{array}{c|rcc}
+         x & 0 & \to & 1\\ \hline
+         u & 1 & \to & \sqrt{2}+1 
+       \end{array} \quad
+       \begin{array}{c|ccc}
+         x & 0 & \to & 1 \\ \hline
+         v & -1 & \to & \sqrt{2}-1
+       \end{array}
+     \]
+     と変換される．よって，以下を得る．     
+     \[
+       \begin{aligned}
+         \int_{0}^{1} \frac{dx}{x^4+1} &= \frac{\sqrt{2}}{8} \log \left( 3+2\sqrt{2} \right)
+         + \frac{1}{2} \left( \int_{0}^{1} \frac{1}{u^2+1} \frac{1}{\sqrt{2}} \frac{du}{dx} \ dx 
+           + \int_{0}^{1} \frac{1}{v^2+1} \frac{1}{\sqrt{2}} \frac{dv}{dx} \ dx \right)\\
+         &= \frac{\sqrt{2}}{8} \log \left(3+2\sqrt{2}\right) + \frac{\sqrt{2}}{4}
+         \left( \int_{1}^{\sqrt{2}+1} \frac{du}{u^2+1} + \int_{-1}^{\sqrt{2}-1} \frac{dv}{v^2+1}\right)\\
+         &= \frac{\sqrt{2}}{8} \log \left( 3 + 2\sqrt{2} \right) + \frac{\sqrt{2}}{4} \left(
+           \Big[ \tan^{-1} u \Big]_{1}^{\sqrt{2}+1} + \Big[ \tan^{-1} v \Big]_{-1}^{\sqrt{2}-1}\right)\\
+         &= \frac{\sqrt{2}}{8} \log \left( 3 +2 \sqrt{2} \right) + \frac{\sqrt{2}}{4} \left(
+           \tan^{-1}\left( \sqrt{2}+1 \right) + \tan^{-1} \left( \sqrt{2}-1 \right) \right)\\
+         &= \frac{\sqrt{2}}{8} \log \left( 3+2\sqrt{2} \right) + \frac{\sqrt{2}}{4} \left(
+           \tan^{-1} \left(\sqrt{2}+1\right) + \tan^{-1} \frac{1}{\sqrt{2}+1} \right)\\
+         &= \frac{\sqrt{2}}{8} \log \left(3+2\sqrt{2}\right) + \frac{\pi}{8}\sqrt{2}.
+       \end{aligned}
+     \]
+     ただし，途中で $x \in \left(0,
+       \frac{\pi}{2}\right)$ に対して成り立つ以下の関係式を用いた．
+     \[
+       \tan^{-1}x + \tan^{-1}\frac{1}{x} = \frac{\pi}{2}
+     \]
+
+
+   \item $u=\sqrt{x}$ とおく
+     と，$\frac{du}{dx}=\frac{1}{2\sqrt{x}}=\frac{1}{2u}$
+     より$1= 2u \ \frac{du}{dx}$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 1 & \to & 4 \\ \hline
+         u & 1 & \to & 2
+       \end{array}
+     \]
+     と変換される．よって，以下を得る．
+     \[
+       \begin{aligned}
+         \int_{1}^{4}\frac{1}{\sqrt{x}+1} \ dx &= \int_{1}^{4} \frac{1}{u+1} \ 2u \ \frac{du}{dx} \ dx
+         = 2 \int_{1}^{2} \frac{u}{u+1} \ du = 2 \int_{1}^{2} \frac{u+1-1}{u+1} \ du\\
+         &= 2 \int_{1}^{2} \left( 1 - \frac{1}{u+1} \right) \ du = 2 \Big[ u - \log|u+1| \Big]_{1}^{2}
+         = 2 + 2 \log\frac{2}{3}.
+       \end{aligned}
+     \]
+
+   \item $\ds \int_{1}^{\sqrt{2}} \frac{dx}{x^3+x} = \int_{1}^{\sqrt{2}} \left( \frac{1}{x} - \frac{x}{x^2+1}\right) \ dx
+     = \left[ \log |x| - \frac{1}{2} \log \left(x^2+1 \right)
+     \right]_{1}^{\sqrt{2}} = \log \frac{2}{\sqrt{3}}. $
+     
+   \item $\ds \int_{0}^{1} \frac{dx}{\sqrt{x}} = \lim_{a \to +0} \int_{a}^{1}x^{-\frac{1}{2}} \ dx
+     = \lim_{a \to +0} \Big[ 2x^{\frac{1}{2}} \Big]_{a}^{1} = \lim_{a \to +0}\left(2-2\sqrt{a}\right)=2.$
+
+   \item $\ds \int_{1}^{\infty}\frac{dx}{x^3} = \lim_{b \to \infty} \int_{1}^{b} x^{-3} \ dx
+     = \lim_{b \to \infty} \Big[ -\frac{1}{2}x^{-2}\Big]_{1}^{b} 
+     = \lim_{b \to \infty} \frac{1}{2}\left( 1- \frac{1}{b^2}\right) = \frac{1}{2}.$
+
+   \item $\ds \int_{0}^{2} \frac{dx}{\sqrt{4-x^2}} = \lim_{b \to 2-0} \int_{0}^{b} \frac{dx}{\sqrt{4-x^2}}$ である．
+
+     \vspace{1zh}
+     
+     $u=\frac{x}{2}$ とおくと，$\frac{du}{dx}=\frac{1}{2}$ より $1=2\ \frac{du}{dx}$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 0 & \to & b\\ \hline
+         u & 0 & \to & \frac{b}{2}
+       \end{array}
+     \]
+     と変換される．これより，
+     \[
+       \int_{0}^{b} \frac{dx}{\sqrt{4-x^2}} = \int_{0}^{b} \frac{1}{2\sqrt{1-u^2}}\  2\ \frac{du}{dx} \ dx
+       = \int_{0}^{\frac{b}{2}} \frac{du}{\sqrt{1-u^2}}
+       =\Big[ \sin^{-1} u \Big]_{0}^{\frac{b}{2}} = \sin^{-1} \frac{b}{2}
+     \]
+     なので，以下を得る．
+     \[
+       \int_{0}^{2} \frac{dx}{\sqrt{4-x^2}} = \lim_{b \to 2-0} \sin^{-1} \frac{b}{2} = \sin^{-1} 1 = \frac{\pi}{2}.
+     \]
+
+   \item $\ds \int_{1}^{2} \frac{dx}{x\sqrt{x-1}} = \lim_{a \to 1+0} \int_{a}^{2} \frac{dx}{x\sqrt{x-1}}$ である．
+
+     \vspace{1zh}
+     
+     $u=\sqrt{x-1}$ とおくと $x=u^2+1$ である．ま
+     た，$\frac{du}{dx}=\frac{1}{2\sqrt{x-1}}$ より $\frac{1}{\sqrt{x-1}} = 2 \frac{du}{dx}$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & a & \to & 2 \\ \hline
+         u & \sqrt{a-1} & \to & 1
+       \end{array}
+     \]
+     と変換される．これより，
+     \begin{align*}
+       \int_{a}^{2} \frac{dx}{x\sqrt{x-1}} 
+       &= \int_{a}^{2} \frac{1}{(u^2+1)} \ 2 \frac{du}{dx} \ dx 
+         = 2\int_{\sqrt{a-1}}^{1} \frac{du}{u^2+1} = 2 \Big[ \tan^{-1} u \Big]_{\sqrt{a-1}}^{1} \\
+       &= \frac{\pi}{2} - 2 \tan^{-1} \sqrt{a-1}
+     \end{align*}
+     なので，以下を得る．
+     \[
+       \int_{1}^{2} \frac{dx}{x\sqrt{x-1}} = \lim_{a \to 1+0} \left( \frac{\pi}{2} - 2 \tan^{-1}\sqrt{a-1} \right)
+       = \frac{\pi}{2}.
+     \]
+
+   \item $\ds \int_{-1}^{1} \frac{dx}{\sqrt[4]{(1+x)^3}} 
+     = \lim_{a \to -1+0} \int_{a}^{0} \left(1+x \right)^{-\frac{3}{4}} \ dx
+     + \lim_{b \to 1-0} \int_{0}^{b} \left( 1+x \right)^{-\frac{3}{4}} \ dx$ である．
+     \begin{align*}
+        &\int_{a}^{0} (1+x)^{-\frac{3}{4}} \ dx = \left[ 4 (1+x)^{\frac{1}{4}} \right]_{a}^{0}
+          = 4 - 4 \left( 1+a\right)^{\frac{1}{4}} \to 4 \; ( a \to -1+0),\\
+        &\int_{0}^{b} (1+x)^{-\frac{3}{4}} \ dx = \left[ 4 (1+x)^{\frac{1}{4}} \right]_{0}^{b}
+       = 4\left( 1+b\right)^{\frac{1}{4}} - 4 \to 4 \cdot 2^{\frac{1}{4}}-4 \; (b \to 1-0)
+     \end{align*}
+     だから，以下を得る．
+     \[
+       \int_{-1}^{1} \frac{dx}{\sqrt[4]{(1+x)^3}} = 4+ 4 \cdot 2^{\frac{1}{4}} - 4 = 4 \sqrt[4]{2}.
+     \]
+
+   \item
+     $\ds \int_{-2}^{2} \frac{x}{\sqrt{4-x^2}} \ dx = \lim_{a \to
+       -2+0} \int_{a}^{0} \frac{x}{\sqrt{4-x^2}} \ dx + \lim_{b \to
+       2-0} \int_{0}^{b} \frac{x}{\sqrt{4-x^2}} \ dx$ である．
+
+     \vspace{1zh}
+     
+     $\ds u=\sqrt{4-x^2}$ とおく
+     と，$\ds \frac{du}{dx}=-\frac{x}{\sqrt{4-x^2}}$ よ
+     り $\ds \frac{x}{\sqrt{4-x^2}} = -\frac{du}{dx}$ であるから，
+     \[
+       \int \frac{x}{\sqrt{4-x^2}} = \int -\frac{du}{dx} \ dx = -\int du = -u+C = -\sqrt{4-x^2}+C
+     \]
+     である．ここで，$C$ は任意の実数である．これより，以下を得る．
+     \begin{align*}
+       \int_{-2}^{2} \frac{x}{\sqrt{4-x^2}} \ dx 
+       &= \lim_{a \to -2+0} \left[ -\sqrt{4-x^2} \right]_{a}^{0} 
+         + \lim_{b \to 2-0} \left[ -\sqrt{4-x^2} \right]_{0}^{b}\\
+       &= \lim_{a \to -2+0} \left( -2 +\sqrt{4-a^2}\right)
+         + \lim_{b \to 2-0} \left( -\sqrt{4-b^2} +2\right)\\
+       &= -2 + 2 = 0.
+     \end{align*}
+
+   \item $\ds \int_{0}^{\infty} x e^{-x^2} \ dx = \lim_{b \to \infty} \int_{0}^{b} x e^{-x^2} \ dx$ である．
+
+     \vspace{1zh}
+
+     $u= e^{-x^2}$ とおくと，$\frac{du}{dx} = -2x e^{-x^2}$
+     より $x e^{-x^2} = -\frac{1}{2} \frac{du}{dx}$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 0 & \to & b\\ \hline
+         u & 1 & \to & e^{-b^2}
+       \end{array}
+     \]
+     と変換される．よって，
+     \[
+       \int_{0}^{b} x e^{-x^2} \ dx = \int_{0}^{b} -\frac{1}{2} \frac{du}{dx} \ dx = - \frac{1}{2}\int_{1}^{e^{-b^2}} \ du
+       = \frac{1}{2} \left(1 - e^{-b^2}\right)
+     \]
+     より，以下を得る．
+     \[
+       \int_{0}^{\infty} x e^{-x^2} \ dx = \lim_{b \to \infty} \frac{1}{2} \left( 1 - e^{-b^2} \right) = \frac{1}{2}.
+     \]
+
+   \item $\ds \int_{0}^{1} x \log x \ dx = \lim_{a \to +0} \int_{a}^{1} x  \log x \ dx$ である．
+     \[
+       \int_{a}^{1} x \log x \ dx = \left[ \frac{1}{2}x^2 \log x \right]_{a}^{1} - \int_{a}^{1} \frac{1}{2} x \ dx
+       = - \frac{1}{2}a^2 \log a - \frac{1}{4} \left(1-a^2\right)
+     \]
+     より，
+     \[
+       \int_{0}^{1} x \log x \ dx = \lim_{a \to +0} \left(-\frac{1}{2}a^2 \log a - \frac{1}{4}\left( 1-a^2 \right) \right)
+                                    = -\frac{1}{2} \lim_{a \to +0}  \frac{\log a}{\frac{1}{a^2}} - \frac{1}{4}
+     \]
+     を得る．さらに，ここで
+     \[
+       \lim_{a \to +0} \frac{ \left( \log a\right)'}{\left( \frac{1}{a^2} \right)'} 
+       = \lim_{a \to +0} \frac{\frac{1}{a}}{-\frac{2}{a^3}} = \lim_{a \to +0} -\frac{1}{2} a^2 =0
+     \]
+     より，ロピタルの定理から以下を得る．
+     \[
+       \int_{0}^{1} x \log x \ dx = -\frac{1}{2} \lim_{a \to +0} \frac{\log a}{\frac{1}{a^2}} - \frac{1}{4} = -\frac{1}{4}.
+     \]
+
+   \item $\ds \int_{-\infty}^{\infty} \frac{dx}{x^2+4} = \lim_{a \to -\infty} \int_{a}^{0} \frac{dx}{x^2+4}
+     + \lim_{b \to \infty} \int_{0}^{b}\frac{dx}{x^2+4}$ である．
+
+     \vspace{1zh}
+     
+     $u=\frac{x}{2}$ とおくと，$\frac{du}{dx}=\frac{1}{2}$ より $1 = 2\ \frac{du}{dx}$ であるから，
+     \[
+       \int \frac{dx}{x^2+4} = \int \frac{1}{4(u^2+1)} \ 2\ \frac{du}{dx} \ dx = \frac{1}{2}\int \frac{du}{u^2+1}
+       = \frac{1}{2} \tan^{-1} u +C = \frac{1}{2} \tan^{-1}\frac{x}{2} +C
+     \]
+     を得る．ここで，$C$ は任意の実数である．これより，以下を得る．
+     \begin{align*}
+       \int_{-\infty}^{\infty} \frac{dx}{x^2+4} 
+       &= \lim_{a \to -\infty} \frac{1}{2} \left[ \tan^{-1} \frac{x}{2} \right]_{a}^{0}
+         + \lim_{b \to \infty} \frac{1}{2} \left[ \tan_{-1} \frac{x}{2} \right]_{0}^{b}\\
+       &= \frac{1}{2} \lim_{a \to -\infty} \left(-\tan^{-1}\frac{a}{2}\right)
+         + \frac{1}{2} \lim_{b \to \infty} \tan^{-1} \frac{b}{2}=\frac{\pi}{4} + \frac{\pi}{4} = \frac{\pi}{2}.
+     \end{align*}
+
+   \item $\ds \int_{1}^{\infty}\frac{\log x}{x^2} \ dx = \lim_{b \to \infty} \int_{1}^{b} \frac{\log x}{x^2} \ dx$ である．
+     \[
+       \int_{1}^{b} \frac{\log x}{x^2} \ dx = \left[ -\frac{1}{x} \log x \right]_{1}^{b} + \int_{1}^{b} \frac{1}{x^2} \ dx
+       = -\frac{\log b}{b} + \left[-\frac{1}{x}\right]_{1}^{b} = -\frac{\log b}{b} -\frac{1}{b} +1
+     \]
+     であるが，ここで
+     \[
+       \lim_{ b \to \infty} \frac{\left( \log b\right)'}{b'} = \lim_{b \to \infty} \frac{1}{b} = 0
+     \]
+     より，ロピタルの定理から以下を得る．
+     \[
+       \int_{1}^{\infty} \frac{\log x}{x^2} \ dx  = \lim_{b \to \infty} \left( -\frac{\log b}{b} - \frac{1}{b} +1\right) = 1.
+     \]
+     
+
+   \item
+     $\ds \int_{0}^{\infty} \frac{dx}{e^x (1+e^x)} = \lim_{b \to
+       \infty} \int_{0}^{b} \frac{dx}{e^x\left(1+e^x\right)}$ であ
+     る．
+
+     \vspace{1zh}
+
+     $u=e^{x}$ とおくと，$\frac{du}{dx}=e^{x}=u$ より
+     $1 =\frac{1}{u}\frac{du}{dx}$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 0 & \to & b\\ \hline
+         u & 1 & \to & e^{b}
+       \end{array}
+     \]
+     と変換される．これより
+     \begin{align*}
+       \int_{0}^{b} \frac{dx}{e^x(1+e^x)} 
+       &= \int_{0}^{b} \frac{1}{u(1+u)} \frac{1}{u} \frac{du}{dx} \ dx
+         = \int_{1}^{e^{b}} \frac{du}{u^2(1+u)}\\
+       &= \int_{1}^{e^{b}} \left( \frac{1}{u^2} - \frac{1}{u} + \frac{1}{1+u} \right) \ du
+         = \left[ -\frac{1}{u} - \log|u| + \log |1+u| \right]_{1}^{e^{b}}\\
+       &=1- \log 2 - e^{-b} + \log \left(1+e^{-b}\right)
+     \end{align*}
+     なので，以下を得る．
+     \[
+       \int_{0}^{\infty} \frac{dx}{e^x (1+e^x)} = \lim_{b \to \infty} \left(1 - \log 2 -e^{-b} 
+         + \log \left(1+e^{-b}\right) \right)= 1 - \log 2.
+     \]
+     
+   \item $\ds \int_{0}^{\infty}\frac{dx}{(x^2+1)(x^2+4)}= \lim_{b \to \infty} \int_{0}^{b} \frac{dx}{(x^2+1)(x^2+4)}$ である．
+     \begin{align*}
+       \int_{0}^{b}\frac{dx}{(x^2+1)(x^2+4)} 
+       &= \frac{1}{3}
+         \int_{0}^{b} \frac{dx}{x^2+1}- \frac{1}{3} \int_{0}^{b}
+         \frac{dx}{x^2+4} = \frac{1}{3} \Big[ \tan^{-1} x \Big]_{0}^{b}
+         - \frac{1}{12} \int_{0}^{b} \frac{dx}{\frac{x^2}{4}+1}\\
+       &= \frac{1}{3} \tan^{-1} b - \frac{1}{12} \int_{0}^{b} \frac{dx}{\frac{x^2}{4}+1}
+     \end{align*}
+     なので，$u=\frac{x}{2}$ とおくと $\frac{du}{dx} =
+     \frac{1}{2}$ より $1 = 2 \ \frac{du}{dx}$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 0 & \to & b\\ \hline
+         u & 0 & \to & \frac{b}{2}
+       \end{array}
+     \]
+     と変換される．これより
+     \begin{align*}
+       \int_{0}^{b} \frac{dx}{(x^2+1)(x^2+4)} 
+       &= \frac{1}{3} \tan^{-1}b -
+         \frac{1}{12} \int_{0}^{b} \frac{1}{u^2+1} \ 2\ \frac{du}{dx} \ dx
+       =\frac{1}{3} \tan^{-1} b - \frac{1}{6} \int_{0}^{\frac{b}{2}} \frac{du}{u^2+1}\\
+       &= \frac{1}{3} \tan^{-1} b - \frac{1}{6} \Big[\tan^{-1} u \Big]_{0}^{\frac{b}{2}}
+        = \frac{1}{3} \tan^{-1} b - \frac{1}{6} \tan^{-1}\frac{b}{2}
+     \end{align*}
+     だから，以下を得る．
+     \[
+       \int_{0}^{\infty} \frac{dx}{(x^2+1)(x^2+4)} = \lim_{b \to \infty}
+       \left( \frac{1}{3} \tan^{-1} b - \frac{1}{6} \tan^{-1} \frac{b}{2}
+       \right) = \frac{\pi}{12}.
+     \]
+
+   \item
+     $\ds \int_{0}^{1} \frac{x^4}{\sqrt{1-x^2}} \ dx = \lim_{b \to
+       1-0}\int_{0}^{b} \frac{x^4}{\sqrt{1-x^2}} \ dx$ であ
+     る．
+
+     \vspace{1zh}
+
+     $u=\sin^{-1}x \left( \Leftrightarrow x=\sin u\right)$ とおく
+     と，$\ds \frac{du}{dx} = \frac{1}{\sqrt{1-x^2}}$ であり，積分区間は
+     \[
+       \begin{array}{c|ccc}
+         x & 0 & \to & b\\ \hline
+         u & 0 & \to & \sin^{-1}b
+       \end{array}
+     \]
+     と変換される．これより
+     \begin{align*}
+       \int_{0}^{b} \frac{x^4}{\sqrt{1-x^2}} \ dx 
+       &= \int_{0}^{\sin^{-1}b} \sin^4 u \ du
+       =\int_{0}^{\sin^{-1}b} \left( \frac{1+\cos 2u}{2}\right)^2 \ du\\
+       & = \frac{1}{4}\int_{0}^{\sin^{-1}b} \left( 1+ 2 \cos 2u + \cos^2 2u\right) \ du\\
+       &=\frac{1}{4} \left( \Big[ x + \sin 2u \Big]_{0}^{\sin^{-1}b} 
+         + \int_{0}^{\sin^{-1}b} \frac{1+\cos 4u}{2} \ du\right)\\
+       &= \frac{1}{4} \left( \sin^{-1}b + \sin \left(2 \sin^{-1}b\right)
+         + \frac{1}{2}\Big[ u+\frac{1}{4}\sin 4u\Big]_{0}^{\sin^{-1}b} \right)\\
+       &= \frac{3}{8} \sin^{-1}b + \frac{1}{4} \sin\left(2\sin^{-1}b\right) + \frac{1}{8}\sin\left(4\sin^{-1}b\right)
+     \end{align*}
+     なので，以下を得る．
+     \begin{align*}
+       \int_{0}^{1} \frac{x^4}{\sqrt{1-x^2}} \ dx 
+       &= \lim_{b \to 1-0}\left( \frac{3}{8}\sin^{-1}b + \frac{1}{4} \sin\left(2\sin^{-1}b\right) 
+       + \frac{1}{8}\sin\left(4\sin^{-1}b\right) \right)\\
+       &=\frac{3}{8} \sin^{-1}1 + \frac{1}{4} \sin\left(2 \sin^{-1}1\right) + \frac{1}{8}\sin\left(4\sin^{-1}1\right)\\
+       &= \frac{3}{16}\pi + \frac{1}{4}\sin \pi + \frac{1}{8}\sin 2\pi=\frac{3}{16}\pi.
+     \end{align*}
+     
+   \end{enumerate}
+
+
+\end{document}
